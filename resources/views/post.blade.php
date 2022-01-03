@@ -4,7 +4,10 @@
 <link rel="stylesheet" href="/app.css" />
 
 <body>
-    <h1>Hello World</h1>
+    <article>
+        <?= $post; ?>
+    </article>
+    <a href="/">Go Back To Home</a>
 </body>
 
 <script src="/app.js"></script>

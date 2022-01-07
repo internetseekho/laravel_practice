@@ -57,4 +57,15 @@ class Post
 
     // ----------------------------------------------------------
 
+    public static function findorfail($slug)
+    {
+        $post = static::all()->firstWhere("slug", $slug);
+        if( $post == null ){
+            throw new ModelNotFoundException();
+        }
+        return $post;
+    }
+
+    // ----------------------------------------------------------
+
 }

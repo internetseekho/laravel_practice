@@ -1,21 +1,17 @@
-<!DOCTYPE html>
 
-<title>Sample Blog</title>
-<link rel="stylesheet" href="/app.css" />
+@extends("components.layout")
 
-<body>
+@section("content")
     @foreach ($posts as $post)
-        <article>
-            <h1>
-                <a href="post/{{$post->slug}}">
-                    {{ $post->title }}
-                </a>
-            </h1>
-            <div>
-                {!! $post->body !!}
-            </div>
-        </article>
+    <article>
+        <h1>
+            <a href="post/{{$post->slug}}">
+                {{ $post->title }}
+            </a>
+        </h1>
+        <div>
+            {!! $post->body !!}
+        </div>
+    </article>
     @endforeach
-</body>
-
-<script src="/app.js"></script>
+@endsection

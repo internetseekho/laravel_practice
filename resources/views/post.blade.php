@@ -1,9 +1,6 @@
-<!DOCTYPE html>
+@extends("components.layout")
 
-<title>Sample Blog</title>
-<link rel="stylesheet" href="/app.css" />
-
-<body>
+@section("content")
     <article>
         <h1>
             {{ $post->title }}
@@ -13,6 +10,4 @@
         </div>
     </article>
     <a href="/">Go Back To Home</a>
-</body>
-
-<script src="/app.js"></script>
+@endsection
